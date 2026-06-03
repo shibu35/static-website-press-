@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Static Press — A Retro Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Special+Elite&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="masthead">
+      <div class="masthead-meta">
+        <span id="live-date"></span>
+        <span>Vol. I &mdash; Issue 42</span>
+        <span>Oslo, Norway</span>
+      </div>
+      <div class="masthead-title">
+        <h1>The Static Press</h1>
+        <p class="tagline">Dispatches from the Digital Frontier</p>
+      </div>
+      <div class="masthead-meta">
+        <span>Est. MMXXIV</span>
+        <span>Free to Read</span>
+        <span id="reading-count">Loading...</span>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="#" class="nav-link active" data-filter="all">All</a>
+      <a href="#" class="nav-link" data-filter="tech">Technology</a>
+      <a href="#" class="nav-link" data-filter="culture">Culture</a>
+      <a href="#" class="nav-link" data-filter="opinion">Opinion</a>
+      <a href="#" class="nav-link" data-filter="travel">Travel</a>
+    </nav>
+  </header>
+
+  
+  <main>
+    <section class="hero-section">
+      <article class="hero-post" data-category="tech">
+        <div class="hero-label">&#9733; Editor's Pick</div>
+        <h2 class="hero-title">The Last Days of the Handmade Web</h2>
+        <p class="hero-excerpt">
+          Once upon a time, every website was a labour of love — hand-coded in Notepad, hosted on GeoCities, and adorned with animated GIFs of dancing flames. We look back at what we lost, and why it still matters.
+        </p>
+        <div class="hero-meta">
+          <span class="author">By <strong>M. Holloway</strong></span>
+          <span class="dot">&bull;</span>
+          <span class="category-tag cat-tech">Technology</span>
+          <span class="dot">&bull;</span>
+          <span class="read-time">8 min read</span>
+        </div>
+        <button class="read-more-btn" onclick="openPost('hero')">Read Full Story &rarr;</button>
+      </article>
+    </section>
+
+    
+    <div class="section-divider">
+      <span>&#9670; Latest Dispatches &#9670;</span>
+    </div>
+
+    
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search the archives..." />
+      <span class="search-icon">&#9906;</span>
+    </div>
+
+    
+    <section class="posts-grid" id="posts-container">
+
+      <article class="post-card" data-category="culture">
+        <div class="post-number">01</div>
+        <div class="post-body">
+          <span class="category-tag cat-culture">Culture</span>
+          <h3>Why Vinyl Will Outlive Streaming</h3>
+          <p>There's something in the crackle — a warmth that no lossless codec has managed to replicate. We ask the record shops why they're busier than ever.</p>
+          <div class="post-meta">
+            <span>J. Petrov &mdash; 5 min</span>
+            <button class="read-btn" onclick="openPost('vinyl')">Read &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card" data-category="opinion">
+        <div class="post-number">02</div>
+        <div class="post-body">
+          <span class="category-tag cat-opinion">Opinion</span>
+          <h3>In Defence of Slow Mornings</h3>
+          <p>The productivity cult wants you optimised by 6am. Here's a radical idea: what if you just… didn't? A meditation on the art of doing nothing well.</p>
+          <div class="post-meta">
+            <span>A. Fontaine &mdash; 4 min</span>
+            <button class="read-btn" onclick="openPost('morning')">Read &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card" data-category="travel">
+        <div class="post-number">03</div>
+        <div class="post-body">
+          <span class="category-tag cat-travel">Travel</span>
+          <h3>Postcards from Nowhere in Particular</h3>
+          <p>A dispatch from a two-week train journey with no itinerary, no WiFi, and nothing but a notebook and a questionable map of central Europe.</p>
+          <div class="post-meta">
+            <span>S. Mukherjee &mdash; 7 min</span>
+            <button class="read-btn" onclick="openPost('travel')">Read &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card" data-category="tech">
+        <div class="post-number">04</div>
+        <div class="post-body">
+          <span class="category-tag cat-tech">Technology</span>
+          <h3>The Terminal Is Not Dead</h3>
+          <p>Every decade someone declares the command line obsolete. Every decade, they're wrong. A love letter to blinking cursors and arcane commands.</p>
+          <div class="post-meta">
+            <span>R. Nakamura &mdash; 6 min</span>
+            <button class="read-btn" onclick="openPost('terminal')">Read &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card" data-category="culture">
+        <div class="post-number">05</div>
+        <div class="post-body">
+          <span class="category-tag cat-culture">Culture</span>
+          <h3>On Reading Paper Books in 2026</h3>
+          <p>Every year we're told print is dying. Every year, people keep buying books. A quiet resistance, one dog-eared page at a time.</p>
+          <div class="post-meta">
+            <span>C. Osei &mdash; 3 min</span>
+            <button class="read-btn" onclick="openPost('books')">Read &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card" data-category="opinion">
+        <div class="post-number">06</div>
+        <div class="post-body">
+          <span class="category-tag cat-opinion">Opinion</span>
+          <h3>The Return of the Newsletter</h3>
+          <p>When social media ate the internet, we moved our words into inboxes. Why the humble email newsletter became the most personal medium of the decade.</p>
+          <div class="post-meta">
+            <span>M. Holloway &mdash; 5 min</span>
+            <button class="read-btn" onclick="openPost('newsletter')">Read &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    
+    <div class="no-results hidden" id="no-results">
+      <p>&#9900; No dispatches found. Try another search.</p>
+    </div>
+
+    
+    <section class="subscribe-band">
+      <h2>Join the Press</h2>
+      <p>New dispatches, every fortnight. No algorithms. No noise.</p>
+      <div class="subscribe-form">
+        <input type="email" id="email-input" placeholder="your@email.com" />
+        <button id="subscribe-btn">Subscribe</button>
+      </div>
+      <p class="subscribe-note" id="subscribe-msg"></p>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">
+    <p>&#169; 2026 The Static Press &mdash; Handcrafted HTML, CSS &amp; JS</p>
+    <p class="footer-small">No trackers. No ads. No JavaScript frameworks.</p>
+  </footer>
+
+  
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
